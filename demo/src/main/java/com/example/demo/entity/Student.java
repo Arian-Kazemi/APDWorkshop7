@@ -16,7 +16,7 @@ public class Student {
     private Integer age;
     private String email;
 
-    // Getters and Setters
+    
     public Integer getId() {
         return id;
     }
