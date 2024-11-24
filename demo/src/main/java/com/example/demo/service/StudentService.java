@@ -16,17 +16,17 @@ public class StudentService {
         this.studentRepository = studentRepository;
     }
 
-    // Get all students
+    
     public List<Student> getAllStudents() {
         return studentRepository.findAll();
     }
 
-    // Save a new student
+    
     public Student saveStudent(Student student) {
         return studentRepository.save(student);
     }
 
-    // Update an existing student
+    
     public Student updateStudent(Integer id, Student updatedStudent) {
         Optional<Student> optionalStudent = studentRepository.findById(id);
         if (optionalStudent.isPresent()) {
@@ -40,7 +40,7 @@ public class StudentService {
         }
     }
 
-    // Delete a student by ID
+   
     public void deleteStudent(Integer id) {
         if (studentRepository.existsById(id)) {
             studentRepository.deleteById(id);
